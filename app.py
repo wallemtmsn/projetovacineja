@@ -5,7 +5,7 @@ from models import Usuario
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Noah1310@127.0.0.1/postgres'
 
-init_db(app)
+
 
 # Rota da página inicial
 @app.route('/', methods=['GET', 'POST'])
@@ -30,6 +30,4 @@ def recuperar_senha():
 
 # Rota para rodar o app
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
     app.run(debug=True)
