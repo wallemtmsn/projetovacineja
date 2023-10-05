@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, request
 from database import init_db, db
 from models import Usuario
+import os
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Noah1310@127.0.0.1/postgres'
@@ -30,4 +31,5 @@ def recuperar_senha():
 
 # Rota para rodar o app
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
