@@ -1,0 +1,11 @@
+.sessao-banner {
+    background-image: url("/static/bg-virus.png");
+}
+.cadastro-card {
+    background-color: whitesmoke;
+}
+.card-box-cadastro {
+    padding: 16px;
+    background-color: red;
+    border-radius: 16px;
+}
